@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Comic Sans MS", "Arial Rounded MT Bold", sans-serif;
+    overflow: hidden;
+}
+
+.mar {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(#7ed6ff, #0b78b5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.contenido {
+    text-align: center;
+    z-index: 2;
+}
+
+
+#animal {
+    width: 70vw;
+    max-width: 350px;
+    animation: flotar 3s infinite ease-in-out;
+}
+
+
+h1 {
+    font-size: 42px;
+    color: white;
+    margin: 10px;
+    text-shadow: 3px 3px 0px #075985;
+}
+
+
+p {
+    color: white;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+
+@keyframes flotar {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+
+.burbujas::before,
+.burbujas::after {
+
+    content: "🫧 🫧 🫧 🫧 🫧";
+
+    position: absolute;
+
+    font-size: 40px;
+
+    animation: subir 12s infinite linear;
+
+}
+
+
+.burbujas::after {
+
+    left: 60%;
+
+    animation-duration: 18s;
+
+}
+
+
+@keyframes subir {
+
+    from {
+        bottom: -100px;
+    }
+
+    to {
+        bottom: 110%;
+    }
+
+}
