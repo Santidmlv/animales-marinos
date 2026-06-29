@@ -16,31 +16,34 @@ Al abrir la URL, la página muestra la **foto** y el **nombre** del animal con a
 
 ## Animales disponibles
 
-| Clave URL     | Nombre que se muestra |
-|---------------|-----------------------|
-| `delfin`      | Delfín                |
-| `tiburon`     | Tiburón               |
-| `tortuga`     | Tortuga Marina        |
-| `pulpo`       | Pulpo                 |
-| `caballito`   | Caballito de Mar      |
-| `raya`        | Raya                  |
-| `cangrejo`    | Cangrejo              |
-| `medusa`      | Medusa                |
-| `pez_payaso`  | Pez Payaso            |
+| Clave URL    | Nombre que se muestra |
+|--------------|-----------------------|
+| `ballena`    | Ballena               |
+| `caballito`  | Caballito de Mar      |
+| `cangrejo`   | Cangrejo              |
+| `delfin`     | Delfín                |
+| `estrella`   | Estrella de Mar       |
+| `pez`        | Pez                   |
+| `pezespada`  | Pez Espada            |
+| `pezglobo`   | Pez Globo             |
+| `pezpayaso`  | Pez Payaso            |
+| `pulpo`      | Pulpo                 |
+| `tiburon`    | Tiburón               |
+| `tortuga`    | Tortuga Marina        |
 
-## Agregar un nuevo animal
+## Agregar un animal nuevo
 
-1. Poné la foto en la carpeta `/imagenes/` (JPG o PNG)
+1. Poné la foto en la carpeta `/imagenes/` en formato `.jpeg`
 2. Abrí `script.js` y agregá una entrada en el objeto `ANIMALES`:
 
 ```js
-ballena: {
-  nombre: "Ballena Jorobada",
-  imagen: "imagenes/ballena.jpg"
+medusa: {
+  nombre: "Medusa",
+  imagen: "imagenes/medusa.jpeg"
 }
 ```
 
-3. Generá un QR que apunte a `?animal=ballena`
+3. Generá un QR que apunte a `?animal=medusa`
 
 ## Estructura de archivos
 
@@ -50,13 +53,25 @@ animales-marinos/
 ├── estilo.css
 ├── script.js
 └── imagenes/
-    ├── delfin.jpg
-    ├── tiburon.jpg
-    └── ...
+    ├── ballena.jpeg
+    ├── caballito.jpeg
+    ├── cangrejo.jpeg
+    ├── delfin.jpeg
+    ├── estrella.jpeg
+    ├── pez.jpeg
+    ├── pezespada.jpeg
+    ├── pezglobo.jpeg
+    ├── pezpayaso.jpeg
+    ├── pulpo.jpeg
+    ├── tiburon.jpeg
+    └── tortuga.jpeg
 ```
 
-## Hosting
+## Hosting con GitHub Pages
 
-Podés subir todo esto directamente a **GitHub Pages**:
-- Activá Pages en tu repo (Settings → Pages → branch `main`)
-- Las URLs van a quedar como: `https://santidmlv.github.io/animales-marinos/?animal=delfin`
+Activá Pages en tu repo (Settings → Pages → branch `main`) y las URLs quedan así:
+
+```
+https://santidmlv.github.io/animales-marinos/?animal=delfin
+https://santidmlv.github.io/animales-marinos/?animal=tiburon
+```
