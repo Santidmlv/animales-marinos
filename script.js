@@ -1,43 +1,53 @@
 // ─── DATOS DE ANIMALES ───────────────────────────────────────────────────────
-// Agregá o modificá animales acá.
-// "imagen" es la ruta relativa al archivo (debe estar en la carpeta /imagenes/)
-// "nombre" es el texto que se muestra en la tarjeta.
+// Para agregar un animal nuevo: agregá la foto en /imagenes/ y una entrada acá.
 const ANIMALES = {
-  delfin: {
-    nombre: "Delfín",
-    imagen: "imagenes/delfin.jpg"
-  },
-  tiburon: {
-    nombre: "Tiburón",
-    imagen: "imagenes/tiburon.jpg"
-  },
-  tortuga: {
-    nombre: "Tortuga Marina",
-    imagen: "imagenes/tortuga.jpg"
-  },
-  pulpo: {
-    nombre: "Pulpo",
-    imagen: "imagenes/pulpo.jpg"
+  ballena: {
+    nombre: "Ballena",
+    imagen: "imagenes/ballena.jpeg"
   },
   caballito: {
     nombre: "Caballito de Mar",
-    imagen: "imagenes/caballito.jpg"
-  },
-  raya: {
-    nombre: "Raya",
-    imagen: "imagenes/raya.jpg"
+    imagen: "imagenes/caballito.jpeg"
   },
   cangrejo: {
     nombre: "Cangrejo",
-    imagen: "imagenes/cangrejo.jpg"
+    imagen: "imagenes/cangrejo.jpeg"
   },
-  medusa: {
-    nombre: "Medusa",
-    imagen: "imagenes/medusa.jpg"
+  delfin: {
+    nombre: "Delfín",
+    imagen: "imagenes/delfin.jpeg"
   },
-  pez_payaso: {
+  estrella: {
+    nombre: "Estrella de Mar",
+    imagen: "imagenes/estrella.jpeg"
+  },
+  pez: {
+    nombre: "Pez",
+    imagen: "imagenes/pez.jpeg"
+  },
+  pezespada: {
+    nombre: "Pez Espada",
+    imagen: "imagenes/pezespada.jpeg"
+  },
+  pezglobo: {
+    nombre: "Pez Globo",
+    imagen: "imagenes/pezglobo.jpeg"
+  },
+  pezpayaso: {
     nombre: "Pez Payaso",
-    imagen: "imagenes/pez_payaso.jpg"
+    imagen: "imagenes/pezpayaso.jpeg"
+  },
+  pulpo: {
+    nombre: "Pulpo",
+    imagen: "imagenes/pulpo.jpeg"
+  },
+  tiburon: {
+    nombre: "Tiburón",
+    imagen: "imagenes/tiburon.jpeg"
+  },
+  tortuga: {
+    nombre: "Tortuga Marina",
+    imagen: "imagenes/tortuga.jpeg"
   },
 };
 
@@ -74,7 +84,6 @@ function crearBurbujas() {
 // ─── LEER PARÁMETRO DE URL ────────────────────────────────────────────────────
 function obtenerAnimalDeURL() {
   const params = new URLSearchParams(window.location.search);
-  // Acepta ?animal=delfin  o  ?id=delfin
   return (params.get("animal") || params.get("id") || "").toLowerCase().trim();
 }
 
@@ -97,7 +106,6 @@ function mostrarAnimal(clave) {
   img.alt = datos.nombre;
   nombre.textContent = datos.nombre;
 
-  // Animar la tarjeta con un pequeño delay para que se vea la transición
   requestAnimationFrame(() => {
     setTimeout(() => {
       tarjeta.classList.add("visible");
