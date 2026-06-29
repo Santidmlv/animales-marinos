@@ -2,7 +2,7 @@ const animales = {
 
     delfin: {
         nombre: "DELFIN",
-        imagen: "imagenes/delfin.png"
+        imagen: "imagenes/delfin.jpeg"
     },
 
     tortuga: {
