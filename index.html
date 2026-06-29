@@ -1,34 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Animales del Mar</title>
-
-<link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animales del Mar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
 </head>
-
 <body>
 
-<div class="mar">
+  <div class="oceano">
 
-<div class="burbujas"></div>
+    <div class="luz-superior"></div>
+    <div class="rayos-luz">
+      <div class="rayo"></div>
+      <div class="rayo"></div>
+      <div class="rayo"></div>
+      <div class="rayo"></div>
+      <div class="rayo"></div>
+    </div>
 
-<div class="contenido">
+    <div class="burbujas-container" id="burbujas"></div>
 
-<img id="animal" src="" alt="Animal marino">
+    <div class="contenido" id="contenido">
 
-<h1 id="nombre"></h1>
+      <div class="tarjeta" id="tarjeta">
+        <div class="imagen-wrapper">
+          <img id="animal-img" src="" alt="Animal marino">
+          <div class="brillo-img"></div>
+        </div>
+        <div class="info">
+          <p class="saludo">¡Conocé a...</p>
+          <h1 id="nombre-animal"></h1>
+          <div class="decoracion">
+            <span>🐠</span>
+            <div class="linea-deco"></div>
+            <span>🌊</span>
+            <div class="linea-deco"></div>
+            <span>🐠</span>
+          </div>
+        </div>
+      </div>
 
-<p>¡Hola! 👋</p>
+      <div class="error-msg" id="error-msg">
+        <span class="error-icono">🐙</span>
+        <p>¡Ups! No encontramos ese animal.</p>
+        <p class="error-sub">Revisá el QR e intentá de nuevo.</p>
+      </div>
 
-</div>
+    </div>
 
-</div>
+    <div class="fondo-marino">
+      <div class="coral coral-1">🪸</div>
+      <div class="coral coral-2">🌿</div>
+      <div class="coral coral-3">🪸</div>
+      <div class="coral coral-4">⭐</div>
+      <div class="coral coral-5">🌿</div>
+    </div>
 
+  </div>
 
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
